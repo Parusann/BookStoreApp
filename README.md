@@ -43,7 +43,7 @@ Use the following credentials to log in as the owner:
 
 ## Tech Stack
 
-- Java
+- Java (source level 8 — set in `nbproject/project.properties`)
 - Java Swing
 - NetBeans project structure
 - Plain text file storage
@@ -66,12 +66,16 @@ BookStoreApp/
 |   `-- User.java
 |-- books.txt
 |-- customers.txt
+|-- classDiagram.pdf
+|-- report.pdf
 |-- build.xml
 |-- manifest.mf
 `-- nbproject/
 ```
 
 ## Design Overview
+
+The full UML class diagram is committed as [classDiagram.pdf](classDiagram.pdf), and [report.pdf](report.pdf) documents the use cases and the rationale for the State pattern.
 
 ### Core Classes
 
@@ -146,10 +150,9 @@ javac -d out src/bookstoreapp/*.java
 java -cp out bookstoreapp.BookStoreApp
 ```
 
-Important:
+Run the app from the project root so it can read and write `books.txt` and `customers.txt`.
 
-- Run the app from the project root so it can read and write `books.txt` and `customers.txt`.
-- This command-line compile path was verified in a local check.
+If you have Ant installed, `ant run` compiles and launches the app using the same NetBeans metadata.
 
 ## Notes
 
